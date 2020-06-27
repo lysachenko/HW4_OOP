@@ -11,13 +11,4 @@ public abstract class Shape {
     public Shape(List<Vertex> vertices) {
         this.vertices = vertices;
     }
-
-    public List<Vertex> getVertices() {
-        return vertices;
-    }
-
-    public void setVertices(List<Vertex> vertices) {
-        this.vertices = vertices;
-    }
-
 }

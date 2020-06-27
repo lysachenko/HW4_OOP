@@ -1,9 +1,9 @@
 package com.lysachenko;
 
+import com.lysachenko.shapes.*;
 import com.lysachenko.shapes.abstr.Shape;
 import com.lysachenko.vertex.Vertex2D;
 import com.lysachenko.vertex.Vertex3D;
-import com.lysachenko.shapes.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -10,5 +10,4 @@ public class Vertex2D extends Vertex {
     public String toString() {
         return "(x = " + super.getX() + ", y = " + super.getY() + ")";
     }
-
 }
