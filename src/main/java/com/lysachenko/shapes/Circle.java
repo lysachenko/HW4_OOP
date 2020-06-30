@@ -1,20 +1,16 @@
 package com.lysachenko.shapes;
 
 import com.lysachenko.shapes.abstr.PlaneShape;
-import com.lysachenko.vertex.Vertex;
 import com.lysachenko.vertex.Vertex2D;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class Circle extends PlaneShape {
 
-    private Vertex2D vertex2D;
     private double radius;
 
     public Circle(Vertex2D vertex2D, double radius) {
-        super(new ArrayList<Vertex>(Collections.singletonList(vertex2D)));
-        this.vertex2D = vertex2D;
+        super(Collections.singletonList(vertex2D));
         this.radius = radius;
     }
 
@@ -29,9 +25,9 @@ public class Circle extends PlaneShape {
     @Override
     public String toString() {
         return "Circle: " +
-                "vertex = " + vertex2D +
-                ", radius=" + radius +
-                ", perimeter=" + getPerimeter() +
-                ", area=" + getArea();
+                super.toString() +
+                ", radius = " + radius +
+                ", perimeter = " + getPerimeter() +
+                ", area = " + getArea() + ';';
     }
 }

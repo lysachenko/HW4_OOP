@@ -5,7 +5,7 @@ import com.lysachenko.shop.interfaces.Expirable;
 
 import java.util.Date;
 
-public class FoodProduct extends Product implements Expirable {
+public class FoodProduct extends Product implements Expirable{
 
     private Date expirationDate;
 
@@ -34,5 +34,12 @@ public class FoodProduct extends Product implements Expirable {
 
     public Date getExpirationDate() {
         return expirationDate;
+    }
+
+    @Override
+    public String toString() {
+        return "FoodProduct{" + super.toString() +
+                ", expirationDate=" + expirationDate +
+                '}';
     }
 }

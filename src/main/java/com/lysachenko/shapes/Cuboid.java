@@ -9,14 +9,12 @@ import java.util.Collections;
 
 public class Cuboid extends SpaceShape {
 
-    private Vertex3D vertex3D;
     private double width;
     private double height;
     private double depth;
 
     public Cuboid(Vertex3D vertex3D, double width, double height, double depth) {
-        super(new ArrayList<Vertex>(Collections.singletonList(vertex3D)));
-        this.vertex3D = vertex3D;
+        super(Collections.singletonList(vertex3D));
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -33,11 +31,11 @@ public class Cuboid extends SpaceShape {
     @Override
     public String toString() {
         return "Cuboid: " +
-                "vertex = " + vertex3D +
-                ", width=" + width +
-                ", height=" + height +
-                ", depth=" + depth +
-                ", area=" + getArea() +
-                ", volume=" + getVolume();
+                super.toString() +
+                ", width = " + width +
+                ", height = " + height +
+                ", depth = " + depth +
+                ", area = " + getArea() +
+                ", volume = " + getVolume() + ';';
     }
 }

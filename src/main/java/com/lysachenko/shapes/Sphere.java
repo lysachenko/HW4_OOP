@@ -1,20 +1,16 @@
 package com.lysachenko.shapes;
 
 import com.lysachenko.shapes.abstr.SpaceShape;
-import com.lysachenko.vertex.Vertex;
 import com.lysachenko.vertex.Vertex3D;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class Sphere extends SpaceShape {
 
-    private Vertex3D vertex3D;
     private double radius;
 
     public Sphere(Vertex3D vertex3D, double radius) {
-        super(new ArrayList<Vertex>(Collections.singletonList(vertex3D)));
-        this.vertex3D = vertex3D;
+        super(Collections.singletonList(vertex3D));
         this.radius = radius;
     }
 
@@ -29,9 +25,9 @@ public class Sphere extends SpaceShape {
     @Override
     public String toString() {
         return "Sphere: " +
-                "vertex = " + vertex3D +
-                ", radius=" + radius +
-                ", area=" + getArea() +
-                ", volume=" + getVolume();
+                super.toString() +
+                ", radius = " + radius +
+                ", area = " + getArea() +
+                ", volume = " + getVolume() + ';';
     }
 }

@@ -48,6 +48,16 @@ public abstract class Product implements Buyable {
         this.ageRestriction = ageRestriction;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", ageRestriction=" + ageRestriction +
+                '}';
+    }
+
     public enum AgeRestriction {
         NONE, TEENAGER, ADULT
     }
